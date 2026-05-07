@@ -148,3 +148,13 @@ if __name__ == "__main__":
     print("✅ 上下文记忆：支持多轮对话")
     print("✅ 安全加固：全流程防护")
     print("="*60)
+
+
+import json
+
+# 假设你爬完的书籍列表叫 books
+# 把下面这段加在爬虫最后
+with open("books.json", "w", encoding="utf-8") as f:
+    json.dump(books, f, ensure_ascii=False, indent=2)
+
+print("✅ 数据已保存到 books.json")
